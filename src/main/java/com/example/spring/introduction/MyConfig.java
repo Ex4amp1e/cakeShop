@@ -1,0 +1,21 @@
+package com.example.spring.introduction;
+
+import org.springframework.context.annotation.*;
+
+@Configuration
+@PropertySource("classpath:application.properties")
+//@ComponentScan("com.example.spring.introduction")
+public class MyConfig {
+
+    @Bean
+    @Scope("singleton")
+    public Pet catBean() {
+        System.out.println("!!!!");
+        return new Cat();
+    }
+
+    @Bean
+    public Person personBean() {
+        return new Person(catBean());
+    }
+}
