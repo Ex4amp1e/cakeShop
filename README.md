@@ -1,2 +1,2 @@
-# cakeShop
-Web site for selling cakes
+# Spring Course
+Web site after spring course
